@@ -27,8 +27,7 @@ class CarWashStation:
         wash_cost = (
                 car.comfort_class *
                 (self.clean_power - car.clean_mark) *
-                self.distance_from_city_center
-        ) / 10
+                self.average_rating / self.distance_from_city_center)
         return round(wash_cost, 1)
 
     def wash_single_car(self, car):
